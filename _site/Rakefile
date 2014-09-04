@@ -103,9 +103,9 @@ task :deploy do
   puts "\n## Switching back to source branch"
   status = system("git checkout source")
   puts status ? "Success" : "Failed"
-  # puts "\n## Pushing all branches to origin"
-  # status = system("git push --all origin")
-  # puts status ? "Success" : "Failed"
+  puts "\n## Pushing all branches to origin"
+  status = system("git push -f --all origin")
+  puts status ? "Success" : "Failed"
 end
 
 desc "Commit and deploy _site/"
