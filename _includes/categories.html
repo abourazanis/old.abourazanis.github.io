@@ -1,0 +1,20 @@
+{% if post %}
+    {% if post.categories %}
+        {% capture category %}{{ post.categories | category_links | size }}{% endcapture %}
+        {% unless category == '0' %}
+            <div class="categories">
+                {{ post.categories | category_links }}
+            </div>
+        {% endunless %}
+    {% endif %}
+{% endif %}
+{% if page %}
+    {% if page.categories %}
+        {% capture category %}{{ page.categories | category_links | size }}{% endcapture %}
+        {% unless category == '0' %}
+             <div class="categories">
+                {{ page.categories | category_links }}
+            </div>
+        {% endunless %}
+    {% endif %}
+{% endif %}

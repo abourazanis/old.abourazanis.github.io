@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+
+<h1> {{ page.title }} </h1><br>
+<ul style="list-style-type: none;">
+  {% for post in site.categories[page.category] %}
+    {% unless post.next %}
+        <h3>{{ post.date | date: '%Y %b' }}</h3>
+      {% else %}
+        {% capture currPostDate %}{{ post.date | date: '%Y %b' }}{% endcapture %}
+        {% capture nextPostDate %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
+        {% if currPostDate != nextPostDate %}
+          <h3>{{ post.date | date: '%Y %b' }}</h3>
+        {% endif %}
+      {% endunless %}
+
+    <li>{{ post.date | date: '%b %d' }} - <a href="{{post.url}}">{{ post.title }}</a>
+    <div class="meta"><div class="categories">{% include categories.html %}</div></div>
+</li>
+  {% endfor %}
+</ul>
+
+

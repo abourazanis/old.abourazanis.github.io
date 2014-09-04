@@ -1,0 +1,52 @@
+---
+layout: default
+title: Home
+---
+
+<div class="posts">
+  {% if paginator.posts %}
+    {% for post in paginator.posts %}
+    <article class="post">
+      <header>
+        <div class="meta">
+        <div class="date">{{ post.date | date_to_string }}</div>
+        {% include categories.html %}
+        {% if post.comments %} <div class="comments"><a href="{{ post.url }}#disqus_thread">View Comments</a></div> {% endif %}
+        </div>
+        <h1 class="post-title">
+          <a href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </h1>
+      </header>
+
+        {% if post.content contains site.excerpt_separator %}
+        <div>
+          {{ post.excerpt}}
+          </div>
+          <footer><a href="{{ post.url }}">Read more »</a></footer>
+        {% else %}
+        <div>
+          {{ post.content }}
+          </div>
+        {% endif %}
+
+    </article>
+    {% endfor %}
+  {% else %}
+    <h1>No posts found.</h1>
+  {% endif %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% endif %}
+</div>

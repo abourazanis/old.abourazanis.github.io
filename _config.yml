@@ -1,0 +1,50 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:         pygments
+
+# Permalinks
+permalink:        /:year/:title/
+
+
+# Setup
+title:            Anastasios Bourazanis
+tagline:          'Thoughts on software development'
+description:      ''
+url:              http://abourazanis.com
+baseurl:          /
+
+author:
+  name:           'Anastasios Bourazanis'
+  url:            https://twitter.com/t4S0s_
+  email:          a.bourazanis@gmail.com
+
+paginate:         3
+
+
+github:
+  repo:           https://github.com/tas0s
+
+# Social links
+facebook_user: anastasios.bourazanis
+googleplus_user: AnastasiosBourazanis
+twitter_user: t4S0s_
+github_user: tas0s
+coderwall_user:
+stackoverflow_user:
+linkedin_user: abourazanis
+pinterest_user:
+delicious_user:
+pinboard_user:
+douban_user:
+quora_user:
+instagram_user:
+behance_user:
+subscribe_rss: atom.xml
+
+
+excerpt_separator: <!--more-->
+
+disqus_short_name: abourazanis
+disqus_show_comment_count: true
+
+google_analytics_tracking_id: UA-36113001-3
