@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html>
 
   {% include head.html %}
 
@@ -10,8 +10,8 @@
     <div class="content container">
       {{ content }}
     </div>
+  {% include comments_count.html %}
   {% include ga.html %}
-  {% include disqus_count.html %}
 
   </body>
 </html>

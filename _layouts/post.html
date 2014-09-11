@@ -13,12 +13,7 @@ layout: default
   </header>
   <div>{{ content }}</div>
 </article>
-  {% if site.disqus_short_name and page.comments == true %}
-    <section id="comment">
-      <h1 class="title">Comments</h1>
-      <div id="disqus_thread">{% include comments.html %}</div>
-    </section>
-  {% endif %}
+{% include comments.html %}
 
 
 <div class="related">

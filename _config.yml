@@ -1,4 +1,3 @@
-# Dependencies
 markdown:         redcarpet
 highlighter:         pygments
 
@@ -7,7 +6,7 @@ permalink:        /:year/:title/
 
 
 # Setup
-title:            Anastasios Bourazanis
+title:            'Anastasios Bourazanis'
 tagline:          'Thoughts on software development'
 description:      ''
 url:              http://abourazanis.com
@@ -15,10 +14,20 @@ baseurl:          /
 
 author:
   name:           'Anastasios Bourazanis'
-  url:            https://twitter.com/t4S0s_
+  url:            https://twitter.com/ABourazanis
   email:          a.bourazanis@gmail.com
 
 paginate:         3
+
+# Excerpts
+excerpt_separator: <!--more-->
+
+# Google Analytics
+google_analytics_tracking_id: UA-36113001-3
+
+#Disqus comments
+disqus_short_name: abourazanis
+disqus_show_comment_count: true
 
 
 github:
@@ -42,10 +51,14 @@ instagram_user:
 behance_user:
 subscribe_rss: atom.xml
 
+# Plugins
+gems:
+  - jemoji
+  - jekyll-sitemap
 
-excerpt_separator: <!--more-->
-
-disqus_short_name: abourazanis
-disqus_show_comment_count: true
-
-google_analytics_tracking_id: UA-36113001-3
+# Exclude from production _site
+exclude:
+    - Gemfile
+    - Gemfile.lock
+    - LICENSE
+    - README.md
