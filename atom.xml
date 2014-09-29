@@ -4,7 +4,7 @@
  <title>Anastasios Bourazanis</title>
  <link href="http://abourazanis.com/atom.xml" rel="self"/>
  <link href="http://abourazanis.com/"/>
- <updated>2014-09-19T19:26:01+03:00</updated>
+ <updated>2014-09-29T17:16:38+03:00</updated>
  <id>http://abourazanis.com</id>
  <author>
    <name>Anastasios Bourazanis</name>
@@ -13,12 +13,77 @@
 
  
  <entry>
+   <title type="text">Amazon S3 403 forbidden Error</title>
+   <link href="http://abourazanis.com/2014/Amazon-S3-403-forbidden-Error/"/>
+   <updated>2014-09-29T00:00:00+03:00</updated>
+   <id>http://abourazanis.com/2014/Amazon-S3-403-forbidden-Error/</id>
+   <summary type="html">On the startup I work we use many Amazon Web Services for our website infrastructure.
+One of them is Amazon&amp;#39;s Cloud Storage or Amazon S3 as they have named it.
+With S3 Amazon provides storage access through standarized web service interfaces (e.g REST).
+So that&amp;#39;s about S3, more information you can find on their site.
+
+To use Amazon S3 service with our django setup we have used the excellent
+django-storages.
+
+After a couple of months with no issues at all, I tried to upload a file to S3 via the admin interface of django when the following
+error occured:
+</summary>
+   <content type="html">&lt;p&gt;On the startup I work we use many Amazon Web Services for our website infrastructure.
+One of them is Amazon&amp;#39;s Cloud Storage or &lt;a href=&quot;http://aws.amazon.com/s3/&quot;&gt;Amazon S3&lt;/a&gt; as they have named it.
+With S3 Amazon provides storage access through standarized web service interfaces (e.g REST).&lt;br/&gt;
+So that&amp;#39;s about S3, more information you can find on their &lt;a href=&quot;http://aws.amazon.com/s3/&quot;&gt;site&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To use Amazon S3 service with our django setup we have used the excellent
+&lt;a href=&quot;http://django-storages.readthedocs.org/en/latest/&quot;&gt;django-storages&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;After a couple of months with no issues at all, I tried to upload a file to S3 via the admin interface of django when the following
+error occured:&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;../lib/python2.7/site-packages/boto/s3/bucket.py&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;169&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_key&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_get_key_internal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query_args_l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;../lib/python2.7/site-packages/boto/s3/bucket.py&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;211&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_get_key_internal&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reason&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;S3ResponseError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S3ResponseError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;403&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Forbidden&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;First, I tried to check if something has changed or was wrong with our AWS credentials.
+I checked if we have read/write access to the corresponding S3 bucket:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;boto&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;boto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect_s3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;&amp;lt;access_key&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;&amp;lt;secret_key&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bucket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;s3_bucket_name&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bucket&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new_key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;testkey&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_contents_from_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;This is a read/write test&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;All went as it should. So our credentials are correct.&lt;/p&gt;
+
+&lt;p&gt;After a couple of hours of
+trial and error &lt;img class=&quot;right&quot; src=&quot;/public/images/writing_process.gif&quot;&gt;
+I found the cause:
+Our server&amp;#39;s misconfigured TIME. It was wrong, and AWS respond with a &lt;i&gt;403 FORBIDDEN&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;In order to update the time to the correct value I just ran:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo ntpdate 0.pool.ntp.org&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After that I have checked that ntp is set to auto update by set /etc/cron.daily/ntpdate to be executable:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo chmod &lt;span class=&quot;m&quot;&gt;755&lt;/span&gt; /etc/cron.daily/ntpdate&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;So that was all!
+&lt;img class=&quot;center&quot; src=&quot;/public/images/code-35.gif&quot;&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title type="text">How I started my own Jekyll blog</title>
    <link href="http://abourazanis.com/2014/How-I-started-my-own-Jekyll-blog/"/>
    <updated>2014-09-12T00:00:00+03:00</updated>
    <id>http://abourazanis.com/2014/How-I-started-my-own-Jekyll-blog/</id>
    <summary type="html">The idea to start a personal blog was in my mind for quite some time but
-I could not motivated enough myself to do it. Even after I read various
+I could not motivate enough myself to do it. Even after I read various
 posts suggesting that every developer should have one, as a self note
 keeper, as a way to improve his communication skills and  his &amp;#39;brand&amp;#39;.
 
@@ -31,7 +96,7 @@ Octopress and all the other static site
 generators. I was intrigued.
 </summary>
    <content type="html">&lt;p&gt;The idea to start a personal blog was in my mind for quite some time but
-I could not motivated enough myself to do it. Even after I read various
+I could not motivate enough myself to do it. Even after I read various
 posts suggesting that every developer should have one, as a self note
 keeper, as a way to improve his communication skills and  his &amp;#39;brand&amp;#39;.&lt;/p&gt;
 
