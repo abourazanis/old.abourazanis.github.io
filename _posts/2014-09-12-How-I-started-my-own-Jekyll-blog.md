@@ -10,7 +10,7 @@ comments: true
 
 
 The idea to start a personal blog was in my mind for quite some time but
-I could not motivated enough myself to do it. Even after I read various
+I could not motivate enough myself to do it. Even after I read various
 posts suggesting that every developer should have one, as a self note
 keeper, as a way to improve his communication skills and  his 'brand'.
 
