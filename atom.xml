@@ -4,7 +4,7 @@
  <title>Anastasios Bourazanis</title>
  <link href="http://abourazanis.com/atom.xml" rel="self"/>
  <link href="http://abourazanis.com/"/>
- <updated>2014-09-29T17:16:38+03:00</updated>
+ <updated>2015-02-13T13:59:16+02:00</updated>
  <id>http://abourazanis.com</id>
  <author>
    <name>Anastasios Bourazanis</name>
@@ -57,7 +57,7 @@ I checked if we have read/write access to the corresponding S3 bucket:&lt;/p&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_contents_from_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;This is a read/write test&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;All went as it should. So our credentials are correct.&lt;/p&gt;
+&lt;p&gt;All went as it should. So our credentials were correct.&lt;/p&gt;
 
 &lt;p&gt;After a couple of hours of
 trial and error &lt;img class=&quot;right&quot; src=&quot;/public/images/writing_process.gif&quot;&gt;
